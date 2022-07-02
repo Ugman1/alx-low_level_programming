@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 /**
  * main - Entry point
@@ -6,17 +8,20 @@
  */
 int main(void)
 {
-README.md int n;
+int n;
+int L;
+char str[] = "Last digit of";
 
-README.md srand(time(0));
-README.md n = rand() - RAND_MAX / 2;
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+L = n % 10;
 
-README.md if (n > 0)
-README.md README.md printf("%d is positive\n", n);
-README.md else if (n == 0)
-README.md README.md printf("%d is zero\n", n);
-README.md else
-README.md README.md printf("%d is negative\n", n);
+if (L > 5)
+printf("%s %d is %d and is greater than 5\n", str, n, L);
+else if (L == 0)
+printf("%s %d is %d and is 0\n", str, n, L);
+else if (L < 6)
+printf("%s %d is %d and is less than 6 and not 0\n", str, n, L);
 
-README.md return (0);
+return (0);
 }
