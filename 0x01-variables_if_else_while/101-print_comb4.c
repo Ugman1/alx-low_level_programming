@@ -26,7 +26,7 @@ int main(void)
 			while (n3 <= 57)
 			{
 				putchar(n1);
-				tchar(n2);
+				putchar(n2);
 				putchar(n3);
 
 				if (n1 != 55 || n2 != 56 || n3 != 57)
