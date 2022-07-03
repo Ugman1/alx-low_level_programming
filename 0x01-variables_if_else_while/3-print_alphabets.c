@@ -1,24 +1,26 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
+
 /**
- *main - Task 3 prints the alphabet in lowercase, and then in uppercase
- *followed by a new line
- *
- *Return: 0
- **/
+ *  * main - program that alphabet in lowercase, and then in uppercase,
+ *   * You can only use the putchar
+ *    * Return: 0
+*/
+
 int main(void)
 {
-        int ch;
+	int lw = 'a';
+	int up = 'A';
 
-        for (ch = 97; ch <= 122; ch++)
-        {
-        putchar(ch);
-        }
-        for (ch = 65; ch <= 90; ch++)
-        {
-        putchar(ch);
-        }
-        putchar(10); /* this is the ASCII code for new line*/
-        return (0);
+	while (lw <= 'z')
+	{
+		putchar(lw);
+		lw += 1;
+	}
+	while (up <= 'Z')
+	{
+		putchar(up);
+		up += 1;
+	}
+	putchar('\n');
+	return (0);
 }
